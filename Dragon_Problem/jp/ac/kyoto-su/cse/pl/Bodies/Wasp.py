@@ -5,6 +5,10 @@ import sys
 import os
 import urllib
 
+from jp.ac.kyoto_su.cse.pl.MVC.Model import OpenGLModel
+from jp.ac.kyoto_su.cse.pl.MVC.View import OpenGLView
+from jp.ac.kyoto_su.cse.pl.Parts.Polygon import OpenGLPolygon
+
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
