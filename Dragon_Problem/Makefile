@@ -1,18 +1,29 @@
-PYCS	= $(shell find . -name "*.pyc")
-PYOPENGL	= PyOpenGL-3.0.2
-OPENGL	= OpenGL
-TARGET	= dragon.py
+PYCS	:= $(shell find . -name "*.pyc")
+NAME	= PrimeMinistersByPython
+TARGET	= PrimeMinisters.py
+PACKAGE	= primeministers
+INSTDIR	= PrimeMinisters.app/Contents/Resources/Python/
 
 all:
-	@if [ ! -e $(PYOPENGL) ] ; then unzip $(PYOPENGL).zip ; fi
-	@if [ ! -e $(OPENGL) ] ; then ln -s $(PYOPENGL)/$(OPENGL) $(OPENGL) ; fi
+	rm -rf ~/Desktop/SouriDaijin
 
 clean:
 	@for each in ${PYCS} ; do echo "rm -f $${each}" ; rm -f $${each} ; done
+	if [ -e $(INSTDIR) ] ; then rm -f -r $(INSTDIR) ; fi
 
-wipe:
-	if [ -e $(OPENGL) ] ; then rm -f $(OPENGL) ; fi
-	if [ -e $(PYOPENGL) ] ; then rm -f -r $(PYOPENGL) ; fi
-
-test: all
+test:
 	python ${TARGET}
+	@open ~/Desktop/SouriDaijin/index.html
+
+install:
+	if [ ! -e $(INSTDIR) ] ; then mkdir $(INSTDIR) ; fi
+	cp -p -r $(TARGET) $(PACKAGE) $(INSTDIR)
+
+zip: clean
+	(cd .. ; zip -r $(NAME).zip ./$(NAME)/)
+
+sdist: clean
+	python setup.py sdist
+
+pydoc: clean
+	(sleep 3 ; open http://localhost:9999/$(PACKAGE).html) & pydoc -p 9999
