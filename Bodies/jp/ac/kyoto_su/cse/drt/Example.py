@@ -14,7 +14,7 @@ from OpenGL.GLUT import *
 
 class Example(object):
     """例題プログラム：ドラゴンを実行する。"""
-    def main_test(self):
+    def main(self):
         # """ドラゴンを実行するメインプログラム。"""
         # a_model = DragonModel()
         # a_model.open()

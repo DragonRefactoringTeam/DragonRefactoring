@@ -8,4 +8,4 @@ if __name__ == '__main__':
 		print "テスト"
 		if example != None:
 			print "成功"
-   		sys.exit(example.main_test())
+   		sys.exit(example.main())
