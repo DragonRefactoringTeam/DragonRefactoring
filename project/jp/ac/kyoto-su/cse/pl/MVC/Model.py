@@ -4,6 +4,8 @@
 import sys
 import os
 import urllib
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../Parts')
+
 
 from OpenGL.GL import *
 from OpenGL.GLU import *

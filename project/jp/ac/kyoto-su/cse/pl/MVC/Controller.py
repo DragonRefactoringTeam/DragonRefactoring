@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import os
-import urllib
 
 from OpenGL.GL import *
 from OpenGL.GLU import *
