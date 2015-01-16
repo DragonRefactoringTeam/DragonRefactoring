@@ -1,15 +1,13 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
-import os
-import urllib
-sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../Parts')
-
-
 from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
+
+from jp.ac.kyoto_su.cse.pl.MVC.Projection import OpenGLProjection
+from jp.ac.kyoto_su.cse.pl.MVC.View import OpenGLView
+from jp.ac.kyoto_su.cse.pl.MVC.Controller import OpenGLController
 
 TRACE = True
 DEBUG = False
