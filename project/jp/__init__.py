@@ -2,5 +2,3 @@
 # -*- coding: utf-8 -*-
 
 """パッケージに必要な「__initi__.py」ファイル。"""
-
-# print "*** primeministers ***"
