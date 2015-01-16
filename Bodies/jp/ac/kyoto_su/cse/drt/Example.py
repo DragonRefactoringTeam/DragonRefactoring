@@ -13,27 +13,25 @@ from OpenGL.GLU import *
 from OpenGL.GLUT import *
 
 class Example(object):
-    """例題プログラム：ドラゴンを実行する。"""
     def main(self):
-        # """ドラゴンを実行するメインプログラム。"""
-        # a_model = DragonModel()
-        # a_model.open()
+        """ドラゴンを実行するメインプログラム。"""
+        a_model = DragonModel()
+        a_model.open()
     
-        # a_model = WaspModel()
-        # a_model.open()
+        a_model = WaspModel()
+        a_model.open()
     
-        # a_model = BunnyModel()
-        # a_model.open()
+        a_model = BunnyModel()
+        a_model.open()
     
-        # a_model = PenguinModel()
-        # a_model.open()
+        a_model = PenguinModel()
+        a_model.open()
     
-        # a_model = OniModel()
-        # a_model.open()
+        a_model = OniModel()
+        a_model.open()
     
-        # a_model = BabyModel()
-        # a_model.open()
+        a_model = BabyModel()
+        a_model.open()
     
-        # glutMainLoop()
-
+        glutMainLoop()
         return 0
