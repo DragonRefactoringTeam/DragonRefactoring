@@ -1,29 +1,43 @@
-PYCS	:= $(shell find . -name "*.pyc")
-NAME	= PrimeMinistersByPython
-TARGET	= PrimeMinisters.py
-PACKAGE	= primeministers
-INSTDIR	= PrimeMinisters.app/Contents/Resources/Python/
+PYTHON   = python
+PYDOC    = pydoc
+PYCS	 = $(shell find . -name "*.pyc")
+PYOPENGL = PyOpenGL-3.0.2
+OPENGL	 = OpenGL
+BASE     = Bodies
+EXT      = py
+TARGET	 = $(BASE).$(EXT)
+PACKAGE  = jp.ac.kyoto_su.csu.pl
+INSTDIR  = Bodies.app/Contents/Resources/Python/
+NAME     = Bodies
+DATE     = dragon.txt wasp.txt bunny.ply penguin.txt oni.txt baby.txt
 
 all:
-	rm -rf ~/Desktop/SouriDaijin
+	@if [ ! -e $(PYOPENGL) ] ; then unzip $(PYOPENGL).zip ; fi
+	@if [ ! -e $(OPENGL) ] ; then ln -s $(PYOPENGL)/$(OPENGL) $(OPENGL) ; fi
 
 clean:
 	@for each in ${PYCS} ; do echo "rm -f $${each}" ; rm -f $${each} ; done
-	if [ -e $(INSTDIR) ] ; then rm -f -r $(INSTDIR) ; fi
+	if [ -e $(INSTDIR) ] ; then ln -s $(PYOPENGL)/$(OPENGL) $(OPENGL) ; fi
+	rm -f MANIFEST $(DATA)
 
-test:
-	python ${TARGET}
-	@open ~/Desktop/SouriDaijin/index.html
+wipe:
+	if [ -e $(OPENGL) ] ; then rm -f $(OPENGL) ; fi
+	if [ -e $(PYOPENGL) ] ; then rm -f -r $(PYOPENGL) ; fi
 
-install:
+test: all
+	$(PYTHON) ${TARGET}
+
+install: all
 	if [ ! -e $(INSTDIR) ] ; then mkdir $(INSTDIR) ; fi
-	cp -p -r $(TARGET) $(PACKAGE) $(INSTDIR)
+	cp -p -r $(TARGET) jp $(INSTDIR)
+	cp -R -L $(OPENGL) $(INSTDIR)
 
-zip: clean
+zip: clean wipe
 	(cd .. ; zip -r $(NAME).zip ./$(NAME)/)
 
 sdist: clean
-	python setup.py sdist
+	$(PYTHON) setup.py sdist
 
 pydoc: clean
-	(sleep 3 ; open http://localhost:9999/$(PACKAGE).html) & pydoc -p 9999
+	(sleep 3 ; open http://localhost:9999/$(PACKAGE).html) & $(PYDOC) -p 9999
+
