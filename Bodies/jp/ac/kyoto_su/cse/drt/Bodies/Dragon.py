@@ -65,8 +65,8 @@ class DragonModel(OpenGLModel):
         return
 
 
-def default_window_title(self):
-    """ドラゴンのウィンドウのタイトル(ラベル)を応答する。"""
-    if TRACE: print __name__, self.default_window_title.__doc__
+    def default_window_title(self):
+        """ドラゴンのウィンドウのタイトル(ラベル)を応答する。"""
+        if TRACE: print __name__, self.default_window_title.__doc__
 
-    return "Dragon"
+        return "Dragon"
