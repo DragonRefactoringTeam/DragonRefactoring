@@ -12,6 +12,7 @@ DEBUG = False
 
 
 class DragonModel(OpenGLModel):
+
     """ドラゴンのモデル。"""
 
     def __init__(self):
@@ -27,7 +28,7 @@ class DragonModel(OpenGLModel):
             [0.1018574904194, 0.98480906061847, -0.14062775604137])
         self._projection.fovy_(12.642721790235)
 
-        filename = os.path.join(os.getcwd(), 'text/textdragon.txt')
+        filename = os.path.join(os.getcwd(), 'dragon.txt')
         if os.path.exists(filename) and os.path.isfile(filename):
             pass
         else:
@@ -63,7 +64,6 @@ class DragonModel(OpenGLModel):
                         self._display_object.append(a_tringle)
 
         return
-
 
     def default_window_title(self):
         """ドラゴンのウィンドウのタイトル(ラベル)を応答する。"""

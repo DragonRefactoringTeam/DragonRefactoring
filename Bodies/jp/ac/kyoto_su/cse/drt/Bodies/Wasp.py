@@ -15,6 +15,7 @@ from OpenGL.GLUT import *
 TRACE = True
 DEBUG = False
 
+
 class WaspModel(OpenGLModel):
 
     """スズメバチのモデル。"""
@@ -33,7 +34,7 @@ class WaspModel(OpenGLModel):
         self._projection.fovy_(41.480099231656)
         self._axes_scale = 4.0
 
-        filename = os.path.join(os.getcwd(), 'text/wasp.txt')
+        filename = os.path.join(os.getcwd(), 'wasp.txt')
         if os.path.exists(filename) and os.path.isfile(filename):
             pass
         else:

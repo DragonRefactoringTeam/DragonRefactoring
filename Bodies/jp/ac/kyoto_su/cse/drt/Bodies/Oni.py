@@ -10,6 +10,7 @@ from jp.ac.kyoto_su.cse.drt.Parts.Polygon import OpenGLPolygon
 TRACE = True
 DEBUG = False
 
+
 class OniModel(OpenGLModel):
 
     """鬼のモデル。"""
@@ -28,7 +29,7 @@ class OniModel(OpenGLModel):
         self._projection.fovy_(19.221287002173)
         self._axes_scale = 2.7
 
-        filename = os.path.join(os.getcwd(), 'text/oni.txt')
+        filename = os.path.join(os.getcwd(), 'oni.txt')
         if os.path.exists(filename) and os.path.isfile(filename):
             pass
         else:
