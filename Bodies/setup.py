@@ -4,14 +4,14 @@
 from distutils.core import setup
 
 setup(
-    name = "Bodies",
-    version="1.1.0"
-    description="Bodies written by Python and PyOpenGL",
+    name = 'Bodies',
+    version='1.1.0',
+    description='Bodies written by Python and PyOpenGL',
     url = 'http://www.cse.kyoto-su.ac.jp/~drt',
     author = 'Ishihara, Isobe, Ueda, Yoshio',
     author_email = '',
-    license = '',
+    license = 'The GNU General Public License.',
     long_description = 'ドラゴン・スズメバチ・うさぎ・ペンギン・鬼・赤ちゃんを3次元描画する。',
-    platforms = '',
+    platforms = 'OS X (10.9.1)',
     packages=['jp'],
     )
