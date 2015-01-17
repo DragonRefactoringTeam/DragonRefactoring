@@ -20,5 +20,6 @@ setup(
               'jp.ac.kyoto_su.cse.drt',
               'jp.ac.kyoto_su.cse.drt.Bodies',
               'jp.ac.kyoto_su.cse.drt.MVC',
-              'jp.ac.kyoto_su.cse.drt.Parts'],
+              'jp.ac.kyoto_su.cse.drt.Parts',
+              'text'],
     )
