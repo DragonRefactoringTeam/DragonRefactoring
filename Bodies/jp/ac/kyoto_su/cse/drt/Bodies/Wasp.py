@@ -34,7 +34,7 @@ class WaspModel(OpenGLModel):
         self._projection.fovy_(41.480099231656)
         self._axes_scale = 4.0
 
-        filename = os.path.join(os.getcwd(), 'wasp.txt')
+        filename = os.path.join(os.getcwd(), 'text/wasp.txt')
         if os.path.exists(filename) and os.path.isfile(filename):
             pass
         else:

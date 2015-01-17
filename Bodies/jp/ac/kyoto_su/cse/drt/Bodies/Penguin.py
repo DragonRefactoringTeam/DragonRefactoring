@@ -27,7 +27,7 @@ class PenguinModel(OpenGLModel):
         self._projection.fovy_(13.527497808711)
         self._axes_scale = 2.0
 
-        filename = os.path.join(os.getcwd(), 'penguin.txt')
+        filename = os.path.join(os.getcwd(), 'text/penguin.txt')
         if os.path.exists(filename) and os.path.isfile(filename):
             pass
         else:

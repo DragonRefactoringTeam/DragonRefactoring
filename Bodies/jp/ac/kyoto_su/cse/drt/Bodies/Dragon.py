@@ -28,7 +28,7 @@ class DragonModel(OpenGLModel):
             [0.1018574904194, 0.98480906061847, -0.14062775604137])
         self._projection.fovy_(12.642721790235)
 
-        filename = os.path.join(os.getcwd(), 'dragon.txt')
+        filename = os.path.join(os.getcwd(), 'text/dragon.txt')
         if os.path.exists(filename) and os.path.isfile(filename):
             pass
         else:

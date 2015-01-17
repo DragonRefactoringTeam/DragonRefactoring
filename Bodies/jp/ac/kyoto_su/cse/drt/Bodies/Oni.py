@@ -29,7 +29,7 @@ class OniModel(OpenGLModel):
         self._projection.fovy_(19.221287002173)
         self._axes_scale = 2.7
 
-        filename = os.path.join(os.getcwd(), 'oni.txt')
+        filename = os.path.join(os.getcwd(), 'text/oni.txt')
         if os.path.exists(filename) and os.path.isfile(filename):
             pass
         else:

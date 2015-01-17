@@ -23,7 +23,7 @@ class BunnyModel(OpenGLModel):
         super(BunnyModel, self).__init__()
         self._axes_scale = 0.1
 
-        filename = os.path.join(os.getcwd(), 'bunny.ply')
+        filename = os.path.join(os.getcwd(), 'text/bunny.ply')
         if os.path.exists(filename) and os.path.isfile(filename):
             pass
         else:

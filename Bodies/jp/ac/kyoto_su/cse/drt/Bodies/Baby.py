@@ -29,7 +29,7 @@ class BabyModel(OpenGLModel):
         self._projection.fovy_(13.079457895221)
         self._axes_scale = 1.8
 
-        filename = os.path.join(os.getcwd(), 'baby.txt')
+        filename = os.path.join(os.getcwd(), 'text/baby.txt')
         if os.path.exists(filename) and os.path.isfile(filename):
             pass
         else:
