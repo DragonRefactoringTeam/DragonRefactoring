@@ -13,5 +13,12 @@ setup(
     license = 'The GNU General Public License.',
     long_description = 'ドラゴン・スズメバチ・うさぎ・ペンギン・鬼・赤ちゃんを3次元描画する。',
     platforms = 'OS X (10.10.1)',
-    packages=['jp'],
+    packages=['jp',
+              'jp.ac',
+              'jp.ac.kyoto_su',
+              'jp.ac.kyoto_su.cse',
+              'jp.ac.kyoto_su.cse.drt',
+              'jp.ac.kyoto_su.cse.drt.Bodies',
+              'jp.ac.kyoto_su.cse.drt.MVC',
+              'jp.ac.kyoto_su.cse.drt.Parts'],
     )
