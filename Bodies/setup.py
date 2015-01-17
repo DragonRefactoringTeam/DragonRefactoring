@@ -12,6 +12,6 @@ setup(
     author_email = '',
     license = 'The GNU General Public License.',
     long_description = 'ドラゴン・スズメバチ・うさぎ・ペンギン・鬼・赤ちゃんを3次元描画する。',
-    platforms = 'OS X (10.9.1)',
+    platforms = 'OS X (10.10.1)',
     packages=['jp'],
     )
